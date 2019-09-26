@@ -1,5 +1,5 @@
 # Use the nginx-parent image as base
-FROM nginx:latest
+FROM nginx:1.17.4
 EXPOSE 8080
 LABEL io.openshift.expose-services="8080:http"
 RUN sed -i "s/listen 80/listen 8088/g" /etc/nginx/nginx.conf
